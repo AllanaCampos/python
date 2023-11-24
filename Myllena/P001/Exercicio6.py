@@ -19,4 +19,4 @@ Signo = ['Macaco', 'Galo', 'Cão', 'Porco', 'Rato', 'Boi', 'Tigre', 'Coelho', 'D
 anoNasc = int(input("Digite o seu ano de nascimento: "))
 anoBase = int(1900)
 indAnimal = (anoNasc - anoBase) % 12
-print("O seu signo chinês é: ", signo[indAnimal])
+print("O seu signo chinês é: ", Signo[indAnimal])
