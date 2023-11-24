@@ -1,4 +1,8 @@
-###### EXERCICIO 2 #####
+'''
+EXERCICIO 2: Manipulação de variáveis de tipo inteiro, explorando as características
+e os limites.
+'''
+  
 
 #2.1 OS OPERADORE ARIRMÉTICOS SÃO:
 
