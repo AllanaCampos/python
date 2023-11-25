@@ -1,3 +1,9 @@
+"""
+Para implementar a persistencia de dados, torna-se necessario salvar a
+lista listaDeTarefas em um arquivo. O principal modo de fazer isso é quando
+for realizada qualquer alteração na lista, haja o upload da nova lista, a
+dinamica do arquivo consiste em que cada linha representa uma tarefa da lista
+"""
 def adicionarTarefa(listaDeTarefas):
         id = listaDeTarefas.__len__()+1;
         descricao = input("digite a descrição tarefa: ")
