@@ -3,9 +3,13 @@
 ### Membros:
 
 Allana Campos - allanacampos50@gmail.com
+
 Gabriel Sousa - gabrielsousa4242@gmail.com
+
 Girleide Macário - girleide.macario@gmail.com
+
 Leane Soares - leanesoares212@gmail.com
+
 Myllena Souza - mssilva.egq@uesc.com
 
 O repositório contém 6 branches, uma para cada membro do grupo e a branch main, que engloba a resolução do grupo para as atividades práticas de python.
