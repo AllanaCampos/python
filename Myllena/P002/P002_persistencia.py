@@ -29,10 +29,11 @@ def listarTarefas():
     else:
         print("Lista de Tarefas: ")
         for idx, tarefa in enumerate(tarefas, start = 1):
-            status = "[x]" if tarefa['concuida'] else "[ ]"
+            status = "[x]" if tarefa['concluida'] else "[ ]"
             print(f"{idx}.{tarefa['descricao']}{status}")
             
 def concluirTarefa():
+    
     listarTarefas ()
     id = int(input("Digite o ID da tarefa que gostaria de marcar como concluída: ")) - 1
     if 0 <= id < len(tarefas):
