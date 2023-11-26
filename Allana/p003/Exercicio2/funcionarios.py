@@ -43,6 +43,12 @@ def consultarFuncionario(funcionarios):
             print(f"Ano de admissão: {f["admissao"]}")
             print(f"Salário: R${f["salario"]: .2f}")
 
+def Reajusta_dez_porcento(funcionarios):
+    for f in funcionarios:
+        salario = f["salario"]
+        salario += salario*0.1
+        f["salario"] = salario
+
 def lerFuncionarios():
     funcionarios = []
     try:

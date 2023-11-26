@@ -9,6 +9,7 @@ def main():
         print("2- Excluir Funcionarios")
         print("3- Listar Funcionarios")
         print("4- Consultar Funcionarios")
+        print("5- Reajuste")
         print("0- Sair")
         op = int(input())
         match op:
@@ -20,6 +21,8 @@ def main():
                 f.listarFuncionarios(funcionarios)
             case 4:
                 f.consultarFuncionario(funcionarios)
+            case 5:
+                f.Reajusta_dez_porcento(funcionarios)
             case 0:
                 f.salvarFuncionarios(funcionarios)
     
