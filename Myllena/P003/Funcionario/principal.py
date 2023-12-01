@@ -13,7 +13,7 @@ def main():
         print (" 4. Consultar Funcionários")
         print (" 5. Reajuste.")
         print(" 0. Encerrar")
-        print("__________________________________")
+        print("_____________________________________")
         opcao = int(input())
         
         match opcao:
