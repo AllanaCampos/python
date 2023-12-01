@@ -4,9 +4,10 @@ listaGeral = []
 def inserirProduto():
     print("Insira o nome do produto que deseja adicionar. ")
     listaProdutos['Nome'] = input().capitalize()
-    print("Insita o código do produto.")
+    print("Insira o código do produto.")
     listaProdutos['Codigo'] = str(len(listaGeral)).zfill(13)
-    print("Digite o preço do produto")
+    listaProdutos['Codigo'] = input().capitalize()
+    print("Digite o preço do produto.")
     listaProdutos['Preco'] = round(float(input()), 2)
     listaGeral.append(dict(listaProdutos))
 
@@ -20,7 +21,7 @@ def excluirProduto():
             break
         
 def listarProduto ():
-    listaG = sorted (listaGeral, key=lambda x: x['preco'])
+    listaG = sorted(listaGeral, key=lambda x: x['Preco'])
     for i in range(0, len(listaG), 10):
         print("\n Lista de Produtos")
         for produto in listaG[i:i+10]:
