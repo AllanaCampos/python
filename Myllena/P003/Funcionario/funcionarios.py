@@ -7,8 +7,8 @@ def novoFuncionario(funcionarios):
     print("Informe o sobrenome do funcionário")
     sobrenome = input().capitalize()
     
-    print("Informe a data de nascimento do funcionário (DD/MM/AAAA)")
-    dtNascimento = input().capitalize()
+    print("Informe o ano de nascimento do funcionário ")
+    anoNascimento = input().capitalize()
     
     print("Informe o RG do funcionário")
     rg = input()
@@ -21,7 +21,7 @@ def novoFuncionario(funcionarios):
     
     print("Informe o salário do funcionário")
     salario = float(input())
-    funcionarios.append({ "Nome": nome, "Sobrenome": sobrenome, "DtNascimento": dtNascimento, "RG": rg, "Admissao": admissao, "Salario": salario})
+    funcionarios.append({ "Nome": nome, "Sobrenome": sobrenome, "AnoNascimento": anoNascimento, "RG": rg, "Admissao": admissao, "Salario": salario})
     
 def excluirFuncionario (funcionarios):
     
@@ -41,7 +41,7 @@ def listarFuncionarios(funcionarios):
         
         print(f"Nome: {f['Nome']}")
         print(f"Sobrenome: {f['Sobrenome']}")
-        print(f"DtNascimento: {f['DtNascimento']}")
+        print(f"AnoNascimento: {f['AnoNascimento']}")
         print(f"RG: {f['RG']}") 
         print(f"Ano de admissão: {f['Admissao']}")
         print(f"Salário: R${f['Salario']: .2f}")
@@ -74,10 +74,10 @@ def lerFuncionarios():
             nome = func[i + 1].split("\n")[0]
             sobrenome = func[i + 2].split("\n")[0]
             rg = func[i].split("\n")[0]
-            dtNascimento = func[i].split("\n")[0]
+            anoNascimento = func[i].split("\n")[0]
             admissao = func[i + 3].split("\n")[0]
             salario = float(func[i + 4].split("\n")[0])
-            funcionarios.append({"Nome": nome, "Sobrenome": sobrenome, "DtNascimento": dtNascimento, "RG": rg, "Admissao": admissao, "Salario": salario})
+            funcionarios.append({"Nome": nome, "Sobrenome": sobrenome, "DtNascimento": anoNascimento, "RG": rg, "Admissao": admissao, "Salario": salario})
         func.close()
         return funcionarios
     except:
@@ -89,7 +89,7 @@ def salvarFuncionarios(funcionarios):
     for f in funcionarios:
         func.write(f["Nome"] + "\n")
         func.write(f["Sobrenome"] + "\n")
-        func.write(f["DtNascimento"] + "\n")
+        func.write(f["AnoNascimento"] + "\n")
         func.write(f["RG"] + "\n")
         func.write(f["Admissao"] + "\n")
         func.write(str(f["Salario"]) + "\n")
