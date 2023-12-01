@@ -13,11 +13,9 @@ def listaTarefas():
 def marcarRealizada():
     listaTarefas()
     opc = int(input("Escolha a tarefa que deseja marcar como realizada "))
-    
     if 1 <= opc <= len(tarefas):
         tarefa = tarefas.pop(opc - 1)
         tarefas.insert(0, tarefa.replace("[ ]", "[x]"))
-
     else:
         print("Invalido")
 
