@@ -21,7 +21,7 @@ def excluirProduto():
             break
         
 def listarProduto ():
-    listaG = sorted(listaGeral, key=lambda x: x['Preco'])
+    listaG = sorted(listaGeral, key=lambda p: p['Preco'])
     for i in range(0, len(listaG), 10):
         print("\n Lista de Produtos")
         for produto in listaG[i:i+10]:
