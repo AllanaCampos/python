@@ -333,8 +333,8 @@ def main():
     for i in zip(nomes.lista, salarios.lista):
         print(i)
          
-    for i in map((lambda s : s + s*0.1), salarios.lista):
-        print(i)
+    for i in map((lambda s : s*1.1), salarios.lista):
+        print("{:.2f}".format(i))
         
     for i in filter((lambda d : Data(ano=2019).__gt__(d)), datas.lista):
         i.dia = 1
