@@ -145,12 +145,12 @@ class ListaDatas(AnaliseDados):
         super().__init__(type(Data))
         self.__lista = []
         
-        @property
-        def lista(self):
-            return self.__lista
+    @property
+    def lista(self):
+        return self.__lista
     
-        @lista.setter
-        def lista(self, valor):
+    @lista.setter
+    def lista(self, valor):
             self.__lista = valor       
     
     def entradaDeDados(self):
@@ -336,7 +336,7 @@ def main():
     for i in map((lambda s : s + s*0.1), salarios.lista):
         print(i)
         
-    for i in filter((lambda d :Data(ano=2019).__gt___(d)), datas.lista):
+    for i in filter((lambda d : Data(ano=2019).__gt__(d)), datas.lista):
         i.dia = 1
         
     print("Fim do teste!!!")
