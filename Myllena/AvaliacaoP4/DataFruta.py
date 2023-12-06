@@ -322,14 +322,23 @@ def main():
     datas.entradaDeDados()
     
     listaListas = [nomes, datas, salarios, idades]
-    
     for lista in listaListas:
+        
         lista.entradaDeDados()
         lista.mostraMediana()
         lista.mostraMenor()
         lista.mostraMaior()
         print("___________________")
-
+    
+    for i in zip(nomes.lista, salarios.lista):
+        print(i)
+         
+    for i in map((lambda s : s + s*0.1), salarios.lista):
+        print(i)
+        
+    for i in filter((lambda d :Data(ano=2019).__gt___(d)), datas.lista):
+        i.dia = 1
+        
     print("Fim do teste!!!")
 
 if __name__ == "__main__":
