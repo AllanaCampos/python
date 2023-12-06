@@ -104,7 +104,7 @@ class ListaNomes(AnaliseDados):
         
     @property
     def lista(self):
-        return self
+        return self.__lista
     
     @lista.setter
     def lista(self, valor):
@@ -157,7 +157,7 @@ class ListaDatas(AnaliseDados):
         print("Quantos elementos existirão na lista de datas?")
         qtd = int(input())
         for i in range(qtd):
-            print(f"Digite o a data {i + 1} no seguinte formato: DD/MM/YYYY")
+            print(f"Digite a data {i + 1} no seguinte formato: DD/MM/YYYY")
             valor = input()
             dia = int(valor.split(("/"))[0])
             mes = int(valor.split(("/"))[1])
