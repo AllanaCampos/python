@@ -53,6 +53,6 @@ def consultaProdutos(Produtos):
             print(f"Preço do produto {produto['nome']}: R${produto['preco']:.2f}")
             input("Pressione Enter para continuar...")
             return
-
+        
     print("Produto não encontrado.")
 

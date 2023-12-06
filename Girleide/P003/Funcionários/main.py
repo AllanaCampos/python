@@ -1,7 +1,7 @@
 import funcionarios as f
 
 def main():
-    arquivo = "dadosFuncionarios.txt"
+    arquivo = "C:/Users/girle/Desktop/Residencia/MODULO 2/Python/python/Girleide/P003/Funcionários/dadosFuncionarios.txt"
     leDados = f.carregaDados(arquivo)
     
     print("Menu:")
