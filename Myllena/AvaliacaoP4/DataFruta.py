@@ -100,7 +100,15 @@ class ListaNomes(AnaliseDados):
     
     def __init__(self):
         super().__init__(type("String"))
-        self.__lista = []        
+        self.__lista = []
+        
+    @property
+    def lista(self):
+        return self
+    
+    @lista.setter
+    def lista(self, valor):
+        self.lista = valor    
 
     def entradaDeDados(self):
         print("Quantos elementos existirão na lista de nomes?")
@@ -135,7 +143,15 @@ class ListaDatas(AnaliseDados):
         
     def __init__(self):
         super().__init__(type(Data))
-        self.__lista = []        
+        self.__lista = []
+        
+        @property
+        def lista(self):
+            return self.__lista
+    
+        @lista.setter
+        def lista(self, valor):
+            self.__lista = valor       
     
     def entradaDeDados(self):
         print("Quantos elementos existirão na lista de datas?")
@@ -165,6 +181,11 @@ class ListaDatas(AnaliseDados):
         listaOrdenada = self.ordena()
         print(f"Última data: {listaOrdenada[listaOrdenada.__len__() - 1]}")
     
+    def listarEmOrdem(self):
+        listaOrdenada = self.ordena()
+        for i in listaOrdenada:
+            print(i)
+    
     def __str__(self):
         listaStr = []
         separador = ", "
@@ -187,7 +208,15 @@ class ListaSalarios(AnaliseDados):
 
     def __init__(self):
         super().__init__(type(float))
-        self.__lista = []        
+        self.__lista = []
+        
+    @property
+    def lista(self):
+            return self.__lista
+    
+    @lista.setter
+    def lista(self, valor):
+            self.__lista = valor       
 
     def entradaDeDados(self):
         print("Quantos elementos existirão na lista de salários?")
@@ -213,6 +242,11 @@ class ListaSalarios(AnaliseDados):
         listaOrdenada = sorted(self.__lista)
         print(f"Maior salário: {listaOrdenada[listaOrdenada.__len__() - 1]}") 
     
+    def listarEmOrdem(self):
+        listaOrdenada = sorted(self.__lisa)
+        for i in listaOrdenada:
+            print (str(i))
+            
     def __str__(self):
         listaStr = []
         separador = ", "
@@ -274,6 +308,7 @@ def main():
     datas = ListaDatas()
     salarios = ListaSalarios()
     idades = ListaIdades()
+    datas.entradaDeDados()
     
     listaListas = [nomes, datas, salarios, idades]
     for lista in listaListas:
