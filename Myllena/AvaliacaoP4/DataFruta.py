@@ -263,7 +263,15 @@ class ListaIdades(AnaliseDados):
     
     def __init__(self):
         super().__init__(type(int))
-        self.__lista = []        
+        self.__lista = []
+        
+    @property
+    def lista(self):
+            return self.__lista
+    
+    @lista.setter
+    def lista(self, valor):
+            self.__lista = valor      
     
     def entradaDeDados(self):
         print("Quantos elementos existirão na lista de idades?")
@@ -289,6 +297,11 @@ class ListaIdades(AnaliseDados):
         listaOrdenada = sorted(self.__lista)
         print(f"Maior idade: {listaOrdenada[listaOrdenada.__len__() - 1]}") 
 
+    def listarEmOrdem(self):
+        listaOrdenada = sorted(self.__lista)
+        for i in listaOrdenada:
+            print (str(i))
+        
     def __str__(self):
         listaStr = []
         separador = ", "
@@ -301,8 +314,6 @@ class ListaIdades(AnaliseDados):
         media = (a + b) / 2
         return media
 
-    
-
 def main():
     nomes = ListaNomes()
     datas = ListaDatas()
@@ -311,6 +322,7 @@ def main():
     datas.entradaDeDados()
     
     listaListas = [nomes, datas, salarios, idades]
+    
     for lista in listaListas:
         lista.entradaDeDados()
         lista.mostraMediana()
