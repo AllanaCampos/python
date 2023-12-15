@@ -1,10 +1,10 @@
-from ..recursos.analiseDados import AnaliseDados
+from .analiseDados import AnaliseDados
 
 class ListaIdades(AnaliseDados):
     
     def __init__(self, lista = []):
         super().__init__(type(int))
-        self.__lista = lista
+        self.__lista = lista.copy()
 
     def addIdade(self):
         print("Informe a idade")

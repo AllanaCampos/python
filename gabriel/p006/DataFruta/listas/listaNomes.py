@@ -1,4 +1,4 @@
-from ..recursos.analiseDados import AnaliseDados
+from .analiseDados import AnaliseDados
 
 class ListaNomes(AnaliseDados):
     
